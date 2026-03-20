@@ -40,7 +40,6 @@ const Analytics = () => {
         </div>
       </div>
 
-      {/* Summary Cards Row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
         {summaryStats.map((stat, i) => {
           const Icon = stat.icon;
@@ -64,10 +63,8 @@ const Analytics = () => {
         })}
       </div>
 
-      {/* Main Charts Grid */}
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
         
-        {/* Patient Growth Area Chart */}
         <div className="bg-white p-6 md:p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 xl:col-span-2 min-w-0 flex flex-col">
           <div className="flex justify-between items-center mb-8">
             <h3 className="text-xl font-bold text-gray-900 flex items-center gap-3">
@@ -99,7 +96,6 @@ const Analytics = () => {
           </div>
         </div>
 
-        {/* New Patients Bar Chart */}
         <div className="bg-white p-6 md:p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 min-w-0 flex flex-col">
           <h3 className="text-xl font-bold text-gray-900 mb-8 flex items-center gap-3">
             <div className="h-8 w-2 bg-pink-500 rounded-full"></div>
@@ -122,7 +118,6 @@ const Analytics = () => {
           </div>
         </div>
 
-        {/* Department Distribution Pie Chart */}
         <div className="bg-white p-6 md:p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 min-w-0 flex flex-col">
           <h3 className="text-xl font-bold text-gray-900 mb-8 flex items-center gap-3">
             <div className="h-8 w-2 bg-amber-500 rounded-full"></div>

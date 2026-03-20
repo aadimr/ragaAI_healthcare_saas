@@ -34,7 +34,6 @@ export const Modal = ({ isOpen, onClose, title, children, maxWidth = 'max-w-lg' 
         </div>
       </div>
       
-      {/* Click outside to close overlay */}
       <div className="absolute inset-0 -z-10" onClick={onClose} />
     </div>
   );

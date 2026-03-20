@@ -44,7 +44,6 @@ const DashboardLayout = () => {
   return (
     <div className="flex flex-col h-screen bg-gray-50 font-sans overflow-hidden">
       
-      {/* Top Header Navbar */}
       <header className="h-16 bg-white shadow-sm flex items-center justify-between px-4 sm:px-6 z-40 border-b border-gray-200 shrink-0">
         <div className="flex items-center gap-4">
           <button 
@@ -104,10 +103,8 @@ const DashboardLayout = () => {
         </div>
       </header>
 
-      {/* Main Layout Area */}
       <div className="flex flex-1 overflow-hidden relative">
         
-        {/* Mobile Overlay */}
         {sidebarOpen && (
           <div 
             className="fixed inset-0 bg-gray-900/40 backdrop-blur-sm z-20 md:hidden transition-opacity duration-300"
@@ -115,7 +112,6 @@ const DashboardLayout = () => {
           />
         )}
 
-        {/* Sidebar */}
         <div 
           className={`absolute md:relative z-30 h-full bg-white shadow-xl md:shadow-none border-r border-gray-200 flex flex-col transition-all duration-300 ease-in-out whitespace-nowrap overflow-hidden
             ${sidebarOpen ? 'w-64 translate-x-0' : 'w-64 md:w-0 -translate-x-full md:translate-x-0'}
@@ -156,7 +152,6 @@ const DashboardLayout = () => {
           </div>
         </div>
 
-        {/* Dynamic Content Area */}
         <main className="flex-1 overflow-x-hidden overflow-y-auto p-4 sm:p-6 lg:p-8 bg-gray-50/50 min-w-0">
           <Outlet />
         </main>

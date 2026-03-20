@@ -4,7 +4,6 @@ import { setViewMode, type Patient } from '../features/patientSlice';
 import { LayoutGrid, List as ListIcon, Mail, Phone, Droplet, Activity } from 'lucide-react';
 import type { RootState } from '../store';
 
-// Generic Components
 import { Card, CardBody } from '../components/ui/Card';
 import { Table, type Column } from '../components/ui/Table';
 import { Modal } from '../components/ui/Modal';
@@ -86,7 +85,6 @@ const Patients = () => {
           <p className="mt-1 text-sm text-gray-500">Manage and view all registered patients</p>
         </div>
         
-        {/* Toggle Switch */}
         <div className="bg-white rounded-lg p-1 shadow-sm border border-gray-200 inline-flex">
           <button
             onClick={() => dispatch(setViewMode('grid'))}
@@ -113,7 +111,6 @@ const Patients = () => {
         </div>
       </div>
 
-      {/* Render Grid View */}
       {viewMode === 'grid' ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {patients.map((patient) => (
@@ -160,7 +157,6 @@ const Patients = () => {
           ))}
         </div>
       ) : (
-        /* Render List/Table View via generic Table component */
         <Table<Patient>
           data={patients} 
           columns={tableColumns} 
@@ -168,7 +164,6 @@ const Patients = () => {
         />
       )}
 
-      {/* Patient Details Modal */}
       <Modal 
         isOpen={!!selectedPatient} 
         onClose={() => setSelectedPatient(null)} 
